@@ -30,20 +30,27 @@
     }
     ?>
 
-<?php
+    <li class="nav-item">
+      <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="profile">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+    </li><!-- End Profile Nav -->
+
+    <?php
     if (session()->get('role') == 'admin') {
     ?>
-    <li class="nav-item">
-      <a class="nav-link <?php echo (uri_string() == 'contact') ? "" : "collapsed" ?>" href="contact">
-        <i class="bi bi-envelope"></i>
-        <span>Contact</span>
-      </a>
-    </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link <?php echo (uri_string() == 'contact') ? "" : "collapsed" ?>" href="contact">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
     <?php
     }
     ?>
 
-    
+
 
 
 
