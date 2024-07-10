@@ -11,7 +11,7 @@ class TransaksiController extends BaseController
 {
     protected $cart;
     protected $url = "https://api.rajaongkir.com/starter/";
-    protected $apiKey = "af3c17db35a5074e9f3aca2bfe7b5f62";
+    protected $apiKey = "541c53f5617068f114620418f7b3e88e";
     protected $transaction;
     protected $transaction_detail;
 

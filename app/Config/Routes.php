@@ -38,3 +38,10 @@ $routes->post('buy', 'TransaksiController::buy', ['filter' => 'auth']);
 $routes->get('/keranjang', 'TransaksiController::index', ['filter' => 'auth']);
 $routes->get('/contact', 'Home::Contacthome', ['filter' => 'auth']);
 $routes->get('profile', 'Home::profile', ['filter' => 'auth']);
+
+// $routes->resource('apiController');
+$routes->group('api', function ($routes) 
+{
+    $routes->post('monthly', 'ApiController::monthly');
+    $routes->get('monthly', 'ApiController::monthly');
+});
